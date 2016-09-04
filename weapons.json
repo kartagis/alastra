@@ -1,0 +1,80 @@
+{
+  "sword_dagger": {
+    "name": "Hançer",
+    "damage": 4,
+    "guild": "warrior",
+    "element": nil,
+    "description": "Çifte su verilmiş Bursa işi çelik hançer, işleve önem verenlerin tercihi."
+  },
+  "sword_broadsword": {
+    "name": "Pala Köz",
+    "damage": 8,
+    "guild": "warrior",
+    "element": "fire",
+    "description": "Acımaz keser atar. Aman Ha, Dikkat!.. iki tarafı de keskindir."
+  },
+  "sword_longsword": {
+    "name": "Battal Kılıç",
+    "damage": 10,
+    "guild": "warrior",
+    "element": "water",
+    "description": "Yakın dövüşte düşmanı uzak tutmak ve güçlü vuruşlar için idealdir. Karpal Tünel sendromundan sakınmak için tek elle kullanmayın."
+  },
+  "sword_bastard_sword": {
+    "name": "Bir Buçuk Elli Kılıç",
+    "damage": 15,
+    "guild": "warrior",
+    "element": "earth",
+    "description": "Tam tadında bir ağırlığa sahip olup, uzun kabzasının verdiği mükemmel denge sayesinde bilenin ellerinde kralını tanımaz. "
+  },
+  "sword_devil_claw": {
+    "name": "Şeytanın Pençesi",
+    "damage": 3,
+    "guild": "warrior",
+    "element": "air",
+    "description": "Tırnaklarınızla bir yere gelemezseniz bu pençelerle adınız artık Yolverin."
+  },
+  "sword_sword_of_doom": {
+    "name": "Mahşer Kılıcı",
+    "damage": 7,
+    "guild": "warrior",
+    "element": nil,
+    "description": "Işın Kılıcı"
+  },
+  "sword_casual": {
+    "name": "Kılıç",
+    "damage": 1.2,
+    "guild": "warrior",
+    "element": nil,
+    "description": "Niteliksiz ama hiç yoktan iyidir."
+  },
+  "staff_staff_of_moon": {
+    "name": "Ay Asası",
+    "damage": 5,
+    "guild": "mage",
+    "element": "water",
+    "description": "Buz Hasarı verir."
+  },
+  "staff_earthquake": {
+    "name": "Deprem Asası",
+    "damage": 7,
+    "guild": "mage",
+    "element": "earth",
+    "description": "Düşmanı derinden sarsıp silkeler atar hallaç pamuğa gibi..."
+  },
+  "staff_staff_of_sun": {
+    "name": "Ay Asası",
+    "damage": 6,
+    "guild": "mage",
+    "description": "Yakar kurutur tropikal adanın öğle güneşinden düşen büyük güneş topları gibi ama hedefinden sekmez."
+  },
+  "staff_wild_wind": {
+    "name": "Ay Asası",
+    "damage": 4,
+    "guild": "mage",
+    "element": "air",
+    "description": "Ateş Hasarı verir."
+  },
+
+
+}
