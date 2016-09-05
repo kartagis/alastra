@@ -94,30 +94,35 @@ details = {
    abl: "wind"
  }
 }
-
 choice = new_hero
-  _Guild = choice[0]
-  _Name = choice[1]
-  _Gender = choice[2]
-  _Details = details[_Guild.to_sym]
 
-player = Player.new(_Guild, _Name, _Gender, _Details)
+def newHERO(*choice)
+    _Guild = choice[0]
+    _Name = choice[1]
+    _Gender = choice[2]
+    _Details = details[_Guild.to_sym]
 
-puts "Kahraman ALASTRA klanına katıldı!"
+  player = Player.new(_Guild, _Name, _Gender, _Details)
 
-arr_playerINFO =[["İsim", player.name],
-["HP",         player.health],
-["Strength",   player.strngth],
-["Dexterity",  player.dex],
-["Vitality",   player.vital],
-["Mana",       player.mana],
-["Silah",      player.weaponName],
-["Vuruş Gücü", player.wpDamage],
-["Zırh",       player.armorName],
-["Savunma",    player.defense],
-["Cinsiyet",   player.gender],
-["Yetenek",    player.ability]]
+  puts "Kahraman ALASTRA klanına katıldı!"
 
-player_table = Terminal::Table.new :title => "KAHRAMAN BİLGİSİ", :headings => ['Özellik', 'Değer'], :rows => arr_playerINFO
-player_table.style = {:width => 40, :padding_left => 3, :border_x => "=", :border_i => "X"}
-puts player_table
+  arr_playerINFO =[["İsim", player.name],
+  ["HP",         player.health],
+  ["Strength",   player.strngth],
+  ["Dexterity",  player.dex],
+  ["Vitality",   player.vital],
+  ["Mana",       player.mana],
+  ["Silah",      player.weaponName],
+  ["Vuruş Gücü", player.wpDamage],
+  ["Zırh",       player.armorName],
+  ["Savunma",    player.defense],
+  ["Cinsiyet",   player.gender],
+  ["Yetenek",    player.ability]]
+
+  player_table = Terminal::Table.new :title => "KAHRAMAN BİLGİSİ", :headings => ['Özellik', 'Değer'], :rows => arr_playerINFO
+  player_table.style = {:width => 40, :padding_left => 3, :border_x => "=", :border_i => "X"}
+  puts player_table
+  return player
+end
+
+pc_player = newHERO(choice)
