@@ -1,9 +1,9 @@
-require_relative 'new_game'
+
 
 def saveGame(saveData)
-  hashArray = saveData.to_a
+  hashJson = saveData.to_json
   File.open("save.json", "w") do |f|
-    f.puts JSON.pretty_generate(hashArray)
+    f.puts hashJson
   end
   puts "Kahraman kaydedildi."
 end
@@ -14,9 +14,15 @@ def saveHero(heroData)
   saveGame(saveData)
 end
 
+def load_user_lib( filename )
+  JSON.parse( IO.read(filename) )
+end
+
+
 def loadGame
-  loadJson = File.read("save.json")
-  loadHash = Hash(*JSON.parse(loadJson))
+  loadHash = JSON.parse( IO.read("save.json", encoding:'utf-8') )
   _Player1 = Player.new(loadHash["guild"], loadHash["name"], loadHash["gender"], loadHash["details"])
+  heroInfo(_Player1)
+  saveGame(loadHash)
   return _Player1
 end

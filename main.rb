@@ -1,4 +1,11 @@
+require 'terminal-table'
+require 'colorize'
+require 'json'
+require_relative 'initializations'
 require_relative 'file_controls'
+require_relative 'new_game'
+
+
 
 def gameMenu
   menu = [["Yeni Oyun", 1], ["Son Oyunu Yükle", 2]]
@@ -17,9 +24,8 @@ def gameMenu
     choice = make_a_choice
     $_Player1 = newHERO(choice, details)
     saveHero($_Player1)
-  when "2"
-    $_Player1 = loadGame
-    saveHero($_Player1)
+    when "2"
+      $_Player1 = loadGame
   else
     puts "Hatalı bir seçim yaptınız tekrar deneyin."
     gameMenu

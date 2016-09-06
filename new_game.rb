@@ -1,6 +1,3 @@
-require 'terminal-table'
-require 'colorize'
-require_relative 'initializations'
 
 def make_a_choice
    puts "ALASTRA".center(31).red
