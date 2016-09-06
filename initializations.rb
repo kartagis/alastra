@@ -194,7 +194,7 @@ class	Game < Player
   end
 
 	def	walk(steps_to_take)
-      puts	"Kahraman	#{@steps_taken} adım attı."
-      @steps_taken	+=	steps_to_take
+    puts	"Kahraman	#{@steps_taken} adım attı."
+    @steps_taken	+=	steps_to_take
 	end
 end
