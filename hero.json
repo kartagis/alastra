@@ -1,0 +1,67 @@
+[
+{
+    "warrior": {
+      "health": 160,
+      "strngth": 14,
+      "dex": 5,
+      "vital": 11,
+      "mana": 4,
+      "wpn": {
+        "name": "sword_casual",
+        "damage": 1.2,
+        "guild": "warrior",
+        "element": null,
+        "description": "Hiç yoktan iyidir."
+      },
+      "arm": {
+        "name": "armor_casual",
+        "defense": 1.9,
+        "guild": "warrior",
+        "description": "Dandiğinden bir armor"
+      },
+      "abl": "earth"
+    },
+    "mage": {
+      "health": 100,
+      "strngth": 6,
+      "dex": 9,
+      "vital": 8,
+      "mana": 14,
+      "wpn": {
+        "name": "staff_casual",
+        "damage": 2.4,
+        "guild": "mage",
+        "element": null,
+        "description": "Hiç yoktan iyidir."
+      },
+      "arm": {
+        "name": "armor_casual",
+        "defense": 0.9,
+        "guild": "mage",
+        "description": "Dandiğinden bir armor"
+      },
+      "abl": "fire"
+    },
+    "thief": {
+      "health": 120,
+      "strngth": 9,
+      "dex": 14,
+      "vital": 9,
+      "mana": 5,
+      "wpn": {
+        "name": "dagger_casual",
+        "damage": 1.2,
+        "guild": "thief",
+        "element": null,
+        "description": "Hiç yoktan iyidir."
+      },
+      "arm": {
+        "name": "armor_casual",
+        "defense": 0.9,
+        "guild": "mage",
+        "description": "Dandiğinden bir armor"
+      },
+      "abl": "wind"
+    }
+  }
+]

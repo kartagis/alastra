@@ -1,0 +1,38 @@
+[
+  [
+    "guild",
+    "mage"
+  ],
+  [
+    "name",
+    "Gandalf"
+  ],
+  [
+    "gender",
+    "Lgbt"
+  ],
+  [
+    "details",
+    {
+      "health": 100,
+      "strngth": 6,
+      "dex": 9,
+      "vital": 8,
+      "mana": 14,
+      "wpn": {
+        "name": "staff_casual",
+        "damage": 2.4,
+        "guild": "mage",
+        "element": null,
+        "description": "Hiç yoktan iyidir."
+      },
+      "arm": {
+        "name": "armor_casual",
+        "defense": 0.9,
+        "guild": "mage",
+        "description": "Dandiğinden bir armor"
+      },
+      "abl": "fire"
+    }
+  ]
+]

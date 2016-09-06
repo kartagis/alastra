@@ -66,22 +66,23 @@ include(Game_Objects)
   attr_accessor :health, :strngth, :dex, :vital, :defense, :healimg,
   :mana, :weapon, :armor, :weaponName, :armorName, :wpDamage
   @@crew = 0
-  def initialize(guild, name, gender, details = {})
-    @name = name
+
+  def initialize(guild, name, gender, details)
     @guild = guild
-    @health = details[:health]
-    @strngth = details[:strngth]
-    @dex = details[:dex]
-    @vital = details[:vital]
-    @mana = details[:mana]
-    @weapon = details[:wpn]
-    @weaponName = @weapon[:name]
-    @wpDamage = @weapon[:damage]
-    @armor = details[:arm]
-    @armorName = @armor[:name]
-    @defense = @armor[:defense]
+    @name = name
     @gender = gender
-    @ability = details[:abl]
+    @health = details["health"]
+    @strngth = details["strngth"]
+    @dex = details["dex"]
+    @vital = details["vital"]
+    @mana = details["mana"]
+    @weapon = details["wpn"]
+    @weaponName = @weapon["name"]
+    @wpDamage = @weapon["damage"]
+    @armor = details["arm"]
+    @armorName = @armor["name"]
+    @defense = @armor["defense"]
+    @ability = details["abl"]
     @@crew += 1
   end
 
