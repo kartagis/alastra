@@ -4,14 +4,14 @@
     "damage": 4,
     "guild": "warrior",
     "element": nil,
-    "description": "Çifte su verilmiş Bursa işi çelik hançer, işleve önem verenlerin tercihi."
+    "description": "Çifte su verilmiş Bursa işi çelik hançer. İşleve önem verenlerin tercihi."
   },
   "sword_broadsword": {
     "name": "Pala Köz",
     "damage": 8,
     "guild": "warrior",
     "element": "fire",
-    "description": "Acımaz keser atar. Aman Ha, Dikkat!.. iki tarafı de keskindir."
+    "description": "Acımaz keser atar. Aman ha, dikkat!...  İki tarafı da keskindir."
   },
   "sword_longsword": {
     "name": "Battal Kılıç",
@@ -60,7 +60,7 @@
     "damage": 7,
     "guild": "mage",
     "element": "earth",
-    "description": "Düşmanı derinden sarsıp silkeler atar hallaç pamuğa gibi..."
+    "description": "Düşmanı derinden sarsıp silkeler atar hallaç pamuğu gibi..."
   },
   "staff_staff_of_sun": {
     "name": "Ay Asası",
@@ -74,7 +74,5 @@
     "guild": "mage",
     "element": "air",
     "description": "Ateş Hasarı verir."
-  },
-
-
+  }
 }
