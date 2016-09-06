@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7c8871e-2872-4e64-a6ee-5b44518b5a2f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/alastra.iml" afterPath="$PROJECT_DIR$/.idea/alastra.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/initializations.rb" afterPath="$PROJECT_DIR$/initializations.rb" />
     </list>
@@ -50,17 +48,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="initializations.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="initializations.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/initializations.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1238">
-              <caret line="197" column="4" selection-start-line="197" selection-start-column="4" selection-end-line="197" selection-end-column="4" />
+            <state relative-caret-position="842">
+              <caret line="310" column="2" selection-start-line="310" selection-start-column="2" selection-end-line="310" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
@@ -112,8 +110,8 @@
         <option value="$PROJECT_DIR$/new_game.rb" />
         <option value="$PROJECT_DIR$/file_controls.rb" />
         <option value="$PROJECT_DIR$/main.rb" />
-        <option value="$PROJECT_DIR$/initializations.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/initializations.rb" />
       </list>
     </option>
   </component>
@@ -432,7 +430,7 @@
       <workItem from="1473057773440" duration="2281000" />
       <workItem from="1473062212423" duration="924000" />
       <workItem from="1473180636052" duration="4188000" />
-      <workItem from="1473184838312" duration="1785000" />
+      <workItem from="1473184838312" duration="8219000" />
     </task>
     <servers />
   </component>
@@ -442,7 +440,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20891000" />
+    <option name="totallyTimeSpent" value="27325000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="960" height="1050" extended-state="0" />
@@ -632,10 +630,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/initializations.rb">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1238">
-          <caret line="197" column="4" selection-start-line="197" selection-start-column="4" selection-end-line="197" selection-end-column="4" />
+        <state relative-caret-position="144">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -648,10 +646,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/initializations.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        <state relative-caret-position="842">
+          <caret line="310" column="2" selection-start-line="310" selection-start-column="2" selection-end-line="310" selection-end-column="2" />
           <folding />
         </state>
       </provider>

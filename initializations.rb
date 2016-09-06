@@ -64,7 +64,7 @@ class Player
   attr_reader :name, :guild, :gender, :ability
   attr_accessor :health, :strngth, :dex, :vital, :defense, :healed,
   :mana, :weapon, :armor, :weaponName, :armorName, :wpDamage, :dicePoint, :exp,
-  :armorGuild
+  :armorGuild, :x_coord, :y_coord
 
   include(Dice)
   include(Game_Objects)
@@ -90,6 +90,7 @@ class Player
     @ability = details["abl"]
     @dicePoint = 0
     @exp = 0
+    @x_coord, @y_coord = 0, 0
     @@crew += 1
   end
 
@@ -105,6 +106,12 @@ class Player
   def is_alive?
     return false if self.health <= 0
     true
+  end
+
+  def player_status
+    puts "*" * 120
+    puts "Sağlık Durumu : #{@health}"
+    puts "*" * 120
   end
 end
 
@@ -179,22 +186,131 @@ class Monster
     end
   end
 end
+
+class world
+  WORLD_X = 36
+  WORLD_Y = 36
+
+  def initialize
+    @rooms = Array.new(WORLD_Y, Array.new(WORLD_X))
+  end
+
+  def move_entity_up(entity)
+    entity.y_coord -= 1 if entity.y_coord > 0
+  end
+
+  def move_entity_down(entity)
+    entity.y_coord += 1 entity.y_coord < WORLD_Y - 1
+  end
+
+  def move_entity_right(entity)
+    entity.x_coord += 1 if entity.x_coord < WORLD_X - 1
+  end
+
+  def move_entity_left(entity)
+    entity.x_coord -=1 if entity.x_coord > 0
+    end
+
+    def get_room_of(entity)
+      @room[entity.x_coord][entity.y_coord] ||= Room.new
+    end
+end
+
+class Room
+  attr_accessor :size, content
+
+  def initialize
+    @content = get_content
+    @size = get_size
+    @adjective = get_adjective
+  end
+
+  def interact(player)
+    if @content
+      @content.interect(player)
+      @content = nil
+    end
+  end
+
+  def to_s
+    "Bir #{size} büyüklükte odacıktasın ey kahraman. Odayı keşfetmeyi bizden öğrenecek değilsin."
+  end
+
+  private
+  def get_content
+    [Monster, Item].sample.new
+  end
+
+  def get_size
+    ["Daracık", "Gecekondu tadında", "Yuh artık görmemiş kralın abartı sarayı"].sample
+  end
+
+
+end
+
 class	Game < Player
   include(Dice)
   include(Game_Objects)
 
+  ACTIONS = ["ileri", "sağ", "geri", "sol", "bak", "vur", "al", "durum"]
+
   def	initialize(player, world)
     @player = player
-    @woeld = world
-		start_game
-	end
+    @world = world
 
+    start_game
+  end
+
+  private
+  def start_game
+    while @player.is_alive?
+      @current_room = @world.get_room_of(@player)
+
+      player_status
+
+      action = take_player_input
+      next unless ACTINONS.include? action
+
+      take_action(action)
+    end
+  end
+
+
+  def take_player_input
+    print "Bir sonraki hamlen ne olacak bakalım kahraman #{@player.name} : "
+    gets.chomp.to_sym
+  end
+
+  def print_place
+    puts "Şu an ki harita koordinatlarımız: #{@player.x_coord}, #{@player.y_coord}"
+    puts @current_room
+    if @current_room.content
+      put "Bak görüyor musun, orada bir #{@current_room.content} var."
+    end
+  end
+
+  def take_action(action)
+    case action
+      when
+      when "bak"
+        print_place
+      when "ileri"
+        @world.move_entity_up(@player)
+      when "sağ"
+        @world.move_entity_right(@player)
+      when "geri"
+        @world.move_entity_down(@player)
+      when "sol"
+        @world.move_entity_left(@player)
+      when "al", "vur"
+        @current_room.interect(@player)
+      when "durum"
+        @player.player_status
+    end
+  end
+  
   def game_over
     puts "Kahraman öldü, haliyle kahraman ölünce biz de ölmüş sayıldık."
   end
 
-	def	walk(steps_to_take)
-    puts	"Kahraman	#{@steps_taken} adım attı."
-    @steps_taken	+=	steps_to_take
-	end
 end
